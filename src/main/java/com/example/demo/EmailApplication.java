@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import com.example.demo.data.Message;
+import com.example.demo.validate.MessageValidator;
 
 import java.util.Properties;
 
@@ -36,6 +37,11 @@ public class EmailApplication {
 	    props.put("mail.debug", "true");
 	    
 	    return mailSender;
+	}
+	
+	@Bean
+	public MessageValidator beforeCreateMessageValidator() {
+		return new MessageValidator();
 	}
 	
 

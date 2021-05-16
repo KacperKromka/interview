@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 import java.util.List;
 
+
 @RestController
 @RequestMapping("/api")
 public class ApiController {
@@ -27,6 +28,7 @@ public class ApiController {
 
     @PostMapping("/message")
     public Message message(@RequestBody Message newMessage){
+    	
         return messageRepository.save(newMessage);
     }
 

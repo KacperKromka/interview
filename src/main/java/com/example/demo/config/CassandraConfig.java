@@ -10,5 +10,5 @@ public class CassandraConfig extends AbstractCassandraConfiguration {
         return "acaisoft";
     }
     
-
+  
 }

@@ -18,8 +18,6 @@ public interface MessageRepository extends CassandraRepository<Message, UUID> {
     List<Message> findMessageByMagicNumber(int magicNumber);
 	@AllowFiltering
     Slice<Message> findMessagesByEmail(String emailValue, Pageable pageable);
-    @AllowFiltering
-    List<Message> findMessageByCreatedAtBefore(Timestamp expiryTime);
-
-    
+	@AllowFiltering
+    List<Message> findMessageByCreatedAtBefore(Timestamp expiryTime);   
 }
